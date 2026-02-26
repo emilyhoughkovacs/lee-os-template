@@ -44,7 +44,7 @@ If the meeting transcript/notes have already been read or processed in this sess
 
    ### People files
    - Update `/llm-context/people/[name].md` for every person discussed — add new relationship history entry with date, key details, and next steps
-   - If a person doesn't have a profile yet, create one using `/skills/templates/people-template.md`
+   - If a person doesn't have a profile yet, create one using `llm-context/templates/people-template.md`
 
    ### Domain context
    - Update the relevant `/llm-context/` domain files with new facts, decisions, or status changes

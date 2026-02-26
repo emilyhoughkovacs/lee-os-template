@@ -38,7 +38,7 @@ Keep it to 3-5 questions max -- don't interrogate.
 Copy the project template and initialize:
 
 ```bash
-cp -r skills/project-template/ /path/to/[project-name]/
+cp -r .claude/skills/new-project/project-template/ /path/to/[project-name]/
 cd /path/to/[project-name]
 git init
 ```

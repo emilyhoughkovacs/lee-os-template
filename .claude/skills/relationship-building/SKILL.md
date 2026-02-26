@@ -93,7 +93,7 @@ Before drafting anything, answer these questions:
 
 ### Step 5: Draft the Message
 
-Apply `/skills/your-voice.md` for tone. Then layer in:
+Apply `.claude/skills/your-voice/SKILL.md` for tone. Then layer in:
 
 **Structural Principles:**
 - Open with connection, not preamble

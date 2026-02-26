@@ -43,7 +43,7 @@ Advise on what to do:
 
 ## 5. Draft Response
 
-Using `/skills/your-voice.md`, draft a response ready to copy-paste with minimal edits.
+Using `.claude/skills/your-voice/SKILL.md`, draft a response ready to copy-paste with minimal edits.
 
 ## 6. Auto-Route Context Updates (DO THIS EVERY TIME)
 
@@ -51,7 +51,7 @@ After presenting the triage and draft, AUTOMATICALLY update all affected files. 
 
 ### People files
 - **Existing person:** Update their profile with new information from this communication.
-- **New person:** Create a new profile using the template at `/skills/templates/people-template.md`.
+- **New person:** Create a new profile using the template at `llm-context/templates/people-template.md`.
 
 ### Domain context
 - Identify which `/llm-context/` domain files are affected.

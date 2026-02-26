@@ -46,7 +46,7 @@ List the files you'll load before starting:
 Loading:
 - /llm-context/[relevant domain]/index.md
 - /llm-context/people/[contact].md (if exists)
-- /skills/your-voice.md (outbound communication)
+- .claude/skills/your-voice/SKILL.md (outbound communication)
 ```
 
 If unsure which files are relevant, say so and ask.

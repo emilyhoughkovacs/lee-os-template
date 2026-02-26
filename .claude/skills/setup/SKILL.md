@@ -56,7 +56,7 @@ Tell me about one person you work with regularly — a colleague, collaborator, 
 
 **After they describe someone:**
 
-1. Create a people file at `llm-context/people/[first-last].md` using the template at `/skills/templates/people-template.md`
+1. Create a people file at `llm-context/people/[first-last].md` using the template at `llm-context/templates/people-template.md`
 2. Fill in what they shared — name, title, company, relationship, context, how they work together
 3. Don't ask for fields they didn't mention — fill in what you have, leave the rest for later
 
@@ -77,9 +77,9 @@ Now try the system — pick one:
 
 Execute the request using the context you just collected. This is the first time they see the system work on their real data.
 
-- **"Prep me for a call"** → Run `/skills/call-prep.md` using their priorities + the person's profile
-- **"Draft a message"** → Run `/skills/your-voice.md` (note: no writing samples yet, so use a professional default tone and mention this in the graduation)
-- **"What should I work on"** → Run `/skills/task-recommend.md` using their priorities (note: no tasks yet, so recommend based on priorities and suggest creating a task)
+- **"Prep me for a call"** → Read `.claude/skills/call-prep/SKILL.md` using their priorities + the person's profile
+- **"Draft a message"** → Read `.claude/skills/your-voice/SKILL.md` (note: no writing samples yet, so use a professional default tone and mention this in the graduation)
+- **"What should I work on"** → Read `.claude/skills/task-recommend/SKILL.md` using their priorities (note: no tasks yet, so recommend based on priorities and suggest creating a task)
 
 After delivering the output, show the graduation card.
 

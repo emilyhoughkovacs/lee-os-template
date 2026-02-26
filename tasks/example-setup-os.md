@@ -16,7 +16,7 @@ Customize the template to fit my actual life and work.
 - [ ] Add my current priorities to CLAUDE.md
 - [ ] Write my first context file (work/index.md)
 - [ ] Add 2-3 people files for key contacts
-- [ ] Save 3 writing examples in skills/references/examples.md
+- [ ] Save 3 writing examples in llm-context/references/examples.md
 - [ ] Try `/today` to test the daily briefing skill
 - [ ] Set up Honcho for persistent memory (optional — see setup/honcho.md)
 

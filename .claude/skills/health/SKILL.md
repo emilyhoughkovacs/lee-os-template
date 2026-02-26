@@ -56,7 +56,7 @@ Check if Honcho is configured:
 
 ### 6. Skill Usage (Optional)
 
-Review which skills exist in `/skills/` and whether they have corresponding entries in the CLAUDE.md skill trigger table.
+Review which skills exist in .claude/skills/ and whether they have corresponding entries in the CLAUDE.md skill trigger table.
 
 ## Output Format
 

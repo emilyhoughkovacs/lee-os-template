@@ -22,7 +22,7 @@ Does NOT apply to internal notes, task files, context updates, or casual message
 
 ### 1. Write the draft
 
-Using `/skills/your-voice.md` principles and context from relevant domain files.
+Using `.claude/skills/your-voice/SKILL.md` principles and context from relevant domain files.
 
 ### 2. Run the critic
 
@@ -58,4 +58,4 @@ Evaluate the draft against these criteria:
 
 ### 4. After edits
 
-If significant rewriting happens, ask: "Want me to add this to the voice examples?" Follow the feedback loop in `/skills/your-voice.md`.
+If significant rewriting happens, ask: "Want me to add this to the voice examples?" Follow the feedback loop in `.claude/skills/your-voice/SKILL.md`.

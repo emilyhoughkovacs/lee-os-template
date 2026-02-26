@@ -54,8 +54,8 @@ These behaviors keep the knowledge base current. The `context-sync-nudge.sh` hoo
 
 ## Communications
 
-18. **Triage AND route** — When raw comms are pasted without a question, run `/skills/incoming-comms.md`: identify sender, load context, assess, advise, draft response, THEN update all affected files. Don't ask "should I save?" — just do it.
-19. **Auto-create people files** — When a new contact is mentioned, create a profile immediately from `/skills/templates/people-template.md`. Don't ask — create and notify.
+18. **Triage AND route** — When raw comms are pasted without a question, run the `/incoming-comms` skill (see `.claude/skills/incoming-comms/SKILL.md`): identify sender, load context, assess, advise, draft response, THEN update all affected files. Don't ask "should I save?" — just do it.
+19. **Auto-create people files** — When a new contact is mentioned, create a profile immediately from `llm-context/templates/people-template.md`. Don't ask — create and notify.
 20. **Draft perspective** — Confirm who is sending. Don't assume the sender unless explicitly stated.
 
 ## Proactive Nudges
@@ -89,8 +89,8 @@ These fire based on system state, not memory. Check the conditions below during 
 **After creating the task, add:** *"That's now a task file. Say '/next' any time and I'll recommend what to work on based on your priorities and deadlines."*
 
 ### First writing request without voice samples
-**Condition:** User asks you to draft a message and `/skills/references/examples.md` contains no real writing samples (still placeholder content).
-**After delivering the draft, add:** *"I don't have writing samples from you yet, so this is my best guess at your voice. Paste 2-3 real messages you've sent into `skills/references/examples.md` and I'll start matching how you actually write."*
+**Condition:** User asks you to draft a message and `llm-context/references/examples.md` contains no real writing samples (still placeholder content).
+**After delivering the draft, add:** *"I don't have writing samples from you yet, so this is my best guess at your voice. Paste 2-3 real messages you've sent into `llm-context/references/examples.md` and I'll start matching how you actually write."*
 
 ### Honcho suggestion
 **Condition:** The `/health` skill runs and detects active system usage but no Honcho configuration.
@@ -110,4 +110,4 @@ These fire based on system state, not memory. Check the conditions below during 
 
 ## Dreaming Pass
 
-Only run `/skills/session-end.md` when a session had significant emotional, strategic, or identity-level content. Skip for operational sessions. The dreaming pass synthesizes cross-session patterns -- interpretive work that can't happen in real-time. Also runs as part of `/review`.
+Only run `.claude/skills/session-end/SKILL.md` when a session had significant emotional, strategic, or identity-level content. Skip for operational sessions. The dreaming pass synthesizes cross-session patterns -- interpretive work that can't happen in real-time. Also runs as part of `/review`.

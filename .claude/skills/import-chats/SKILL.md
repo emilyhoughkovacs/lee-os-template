@@ -149,7 +149,7 @@ First assistant response...
 
 ### 8. Create people files
 
-If conversations reference specific people (partners, colleagues, mentors), create people files using the template at `skills/templates/people-template.md`. Extract what you can from the conversations: name, relationship type, key dates, context, communication style.
+If conversations reference specific people (partners, colleagues, mentors), create people files using the template at `llm-context/templates/people-template.md`. Extract what you can from the conversations: name, relationship type, key dates, context, communication style.
 
 ### 9. Clean up and verify
 

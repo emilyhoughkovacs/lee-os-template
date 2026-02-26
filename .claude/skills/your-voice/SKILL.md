@@ -86,9 +86,9 @@ When writing or editing a communication:
 1. **Draft** — Claude writes a version using this skill + examples
 2. **Workshop** — You edit, critique, or rewrite
 3. **Confirm** — You say "this is what I sent" or "this is the final version"
-4. **Capture** — Append the final version to `references/examples.md` with context and what worked
+4. **Capture** — Append the final version to `llm-context/references/examples.md` with context and what worked
 5. **Update principles** — If a pattern emerges across 3+ examples, update the sections above
 
 ## Examples
 
-See `references/examples.md` for real samples of your writing across contexts. When drafting, check examples for the matching context type (Slack, email, LinkedIn, etc.) to calibrate tone.
+See `llm-context/references/examples.md` for real samples of your writing across contexts. When drafting, check examples for the matching context type (Slack, email, LinkedIn, etc.) to calibrate tone.

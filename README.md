@@ -28,9 +28,9 @@ Five layers, each building on the last:
 │  work/  personal/  side-project/        │  files loaded on demand.
 │  people/  goals.md  decisions.md        │  Small, focused, current.
 ├─────────────────────────────────────────┤
-│  skills/ — The Workflows                │  Reusable markdown
-│  today.md  debrief.md  voice.md         │  instructions triggered
-│  catchup.md  call-prep.md              │  by natural language.
+│  .claude/skills/ — The Workflows        │  Reusable markdown skills,
+│  today/  debrief/  your-voice/          │  each a slash command.
+│  catchup/  call-prep/                   │  /today, /debrief, /commit...
 ├─────────────────────────────────────────┤
 │  tasks/ — The Work Queue                │  Individual task files
 │  task-name.md (YAML front matter)       │  with metadata. Searchable,
@@ -112,7 +112,7 @@ The classification uses Haiku, so cost is minimal (~$0.05–0.10 for hundreds of
 > Import my chats
 ```
 
-Claude walks you through the full workflow defined in `skills/import-chats.md`. Here's what happens:
+Claude walks you through the full workflow defined in `.claude/skills/import-chats/SKILL.md`. Here's what happens:
 
 1. **Heuristic matching (free, instant)** — keyword rules match conversations to known projects by name (companies, courses, people). Typically catches ~15% of conversations.
 
@@ -164,49 +164,14 @@ New features introduce themselves the first time you need them — tasks, voice 
 │   ├── side-project/index.md        # Side projects, hobbies
 │   ├── people/                      # One file per person
 │   │   └── jane-doe.md              # Example person profile
+│   ├── references/
+│   │   └── examples.md              # Your real writing samples
+│   ├── templates/
+│   │   └── people-template.md       # Template for new people files
 │   ├── your-os/
 │   │   └── design-philosophy.md     # Why the system works this way
 │   ├── goals.md                     # Goal hierarchy
 │   └── decisions.md                 # Decision register
-│
-├── skills/                          # Reusable workflows as markdown (29 skills)
-│   ├── today.md                     # Daily briefing
-│   ├── task-recommend.md            # Next task recommendation
-│   ├── catchup.md                   # What changed since last session
-│   ├── weekly-review.md             # Weekly priority alignment review
-│   ├── debrief.md                   # Meeting/event debrief
-│   ├── call-prep.md                 # Pre-meeting briefing
-│   ├── incoming-comms.md            # Comms triage + auto-route
-│   ├── process-meetings.md          # Meeting transcript processing
-│   ├── session-end.md               # End-of-session synthesis
-│   ├── profile-update.md            # Self-model dreaming pass
-│   ├── your-voice.md                # Voice calibration for writing
-│   ├── voice-critic.md              # Automated voice consistency check
-│   ├── copywriting.md               # Landing page and web copy
-│   ├── landing-page-critique.md     # CRO and conversion critique
-│   ├── commit.md                    # Git commit workflow
-│   ├── new-project.md               # Spec-driven project scaffolding
-│   ├── task-create.md               # Create tasks from casual mentions
-│   ├── task-complete.md             # Archive completed tasks
-│   ├── interview-prep.md            # Interview preparation
-│   ├── relationship-building.md     # Strategic outreach
-│   ├── pre-flight.md                # Alignment check before complex work
-│   ├── friction-log.md              # Operational friction capture
-│   ├── paper-summary.md             # Research paper summarization
-│   ├── event-checklist.md           # Event lifecycle checklist
-│   ├── post-event.md                # Post-event debrief and ops
-│   ├── health.md                    # System audit
-│   ├── import-chats.md              # Import LLM chat history
-│   ├── setup.md                     # First-run guided onboarding
-│   ├── behaviors.md                 # Detailed behavioral guidelines
-│   ├── templates/
-│   │   └── people-template.md       # Template for new people files
-│   ├── references/
-│   │   └── examples.md              # Your real writing samples
-│   └── project-template/            # Template for new code projects
-│       ├── CLAUDE.md
-│       ├── SPEC.md
-│       └── PLAN.md
 │
 ├── tasks/                           # Active tasks (YAML front matter)
 │   ├── _template.md                 # Task file template
@@ -217,10 +182,45 @@ New features introduce themselves the first time you need them — tasks, voice 
 ├── research/                        # Paper summaries by topic
 ├── .claude/
 │   ├── settings.json                # Hook configuration
-│   └── hooks/
-│       ├── bash-guard.sh            # Blocks destructive commands
-│       ├── context-sync-nudge.sh    # Nudges ripple-effect checks
-│       └── transcript-detector.sh   # Detects meeting transcripts
+│   ├── hooks/
+│   │   ├── bash-guard.sh            # Blocks destructive commands
+│   │   ├── context-sync-nudge.sh    # Nudges ripple-effect checks
+│   │   └── transcript-detector.sh   # Detects meeting transcripts
+│   └── skills/                      # Personal workflow skills (29 skills, slash commands)
+│       ├── today/SKILL.md           # /today — Daily briefing
+│       ├── task-recommend/SKILL.md  # /next — Next task recommendation
+│       ├── catchup/SKILL.md         # /catchup — What changed since last session
+│       ├── weekly-review/SKILL.md   # /review — Weekly priority alignment review
+│       ├── debrief/SKILL.md         # /debrief — Meeting/event debrief
+│       ├── call-prep/SKILL.md       # /call-prep — Pre-meeting briefing
+│       ├── incoming-comms/SKILL.md  # /incoming-comms — Comms triage + auto-route
+│       ├── process-meetings/SKILL.md # /process-meetings — Transcript processing
+│       ├── session-end/SKILL.md     # /session-end — End-of-session synthesis
+│       ├── profile-update/SKILL.md  # /profile — Self-model dreaming pass
+│       ├── your-voice/SKILL.md      # /your-voice — Voice calibration for writing
+│       ├── voice-critic/SKILL.md    # /voice-critic — Automated voice consistency check
+│       ├── copywriting/SKILL.md     # /copywriting — Landing page and web copy
+│       ├── landing-page-critique/SKILL.md # /critique — CRO and conversion critique
+│       ├── commit/SKILL.md          # /commit — Git commit workflow
+│       ├── task-create/SKILL.md     # /task-create — Create tasks from casual mentions
+│       ├── task-complete/SKILL.md   # /task-complete — Archive completed tasks
+│       ├── interview-prep/SKILL.md  # /interview-prep — Interview preparation
+│       ├── relationship-building/SKILL.md # /outreach — Strategic outreach
+│       ├── pre-flight/SKILL.md      # /pre-flight — Alignment check before complex work
+│       ├── friction-log/SKILL.md    # /friction — Operational friction capture
+│       ├── paper-summary/SKILL.md   # /paper-summary — Research paper summarization
+│       ├── event-checklist/SKILL.md # /event-checklist — Event lifecycle checklist
+│       ├── post-event/SKILL.md      # /post-event — Post-event debrief and ops
+│       ├── health/SKILL.md          # /health — System audit
+│       ├── import-chats/SKILL.md    # /import-chats — Import LLM chat history
+│       ├── setup/SKILL.md           # /setup — First-run guided onboarding
+│       ├── behaviors/SKILL.md       # Detailed behavioral guidelines (loaded on demand)
+│       └── new-project/
+│           ├── SKILL.md             # /new-project — Spec-driven project scaffolding
+│           └── project-template/    # Template for new code projects
+│               ├── CLAUDE.md
+│               ├── SPEC.md
+│               └── PLAN.md
 │
 ├── setup/
 │   └── honcho.md                    # Optional: persistent memory with Honcho
@@ -229,7 +229,7 @@ New features introduce themselves the first time you need them — tasks, voice 
 
 ### A note on `.agents/skills/`
 
-This template includes Claude Code native skills in `.agents/skills/` — product management frameworks (JTBD, OKRs, positioning, growth loops, etc.) that Claude Code can invoke when doing strategic work. These are separate from the custom workflow skills in `/skills/`. You don't need to configure them — they're available automatically when Claude Code detects a relevant task. Think of `/skills/` as your personal workflows and `.agents/skills/` as professional frameworks. Delete any that aren't relevant to your work, or add your own.
+This template includes Claude Code native skills in `.agents/skills/` — product management frameworks (JTBD, OKRs, positioning, growth loops, etc.) that Claude Code can invoke when doing strategic work. These are separate from the custom workflow skills in `.claude/skills/`. You don't need to configure them — they're available automatically when Claude Code detects a relevant task. Think of `.claude/skills/` as your personal workflows and `.agents/skills/` as professional frameworks. Delete any that aren't relevant to your work, or add your own.
 
 ## How to Make It Yours
 
@@ -240,13 +240,13 @@ You don't need to fill everything in on day one. Start with CLAUDE.md and one do
 After meetings, paste your notes and say "debrief." After emails, paste them in for triage. After decisions, update the relevant context file. Over time, the system becomes a rich, searchable record of your work.
 
 ### Train your voice
-Save examples of your real writing in `skills/references/examples.md`. The gap between Claude's drafts and your edits is where your voice lives. After 3-5 examples, Claude starts writing like you.
+Save examples of your real writing in `llm-context/references/examples.md`. The gap between Claude's drafts and your edits is where your voice lives. After 3-5 examples, Claude starts writing like you.
 
 ### Add domains as you need them
 New project? Create `llm-context/new-project/index.md` and add a routing entry in CLAUDE.md. The system scales by adding folders, not by reconfiguring anything.
 
 ### Build skills from repetition
-If you find yourself giving Claude the same instructions more than twice, write a skill file. Skills are just markdown instructions—no code required.
+If you find yourself giving Claude the same instructions more than twice, write a skill file. Create `.claude/skills/<name>/SKILL.md` — the directory name becomes the slash command `/name`. Skills are just markdown instructions—no code required.
 
 ## Design Principles
 

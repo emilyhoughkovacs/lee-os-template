@@ -19,7 +19,7 @@ Write landing page and web copy that converts. Starts from positioning, applies 
 
 Load in this order:
 1. Any positioning or strategy context for the product/project
-2. `/skills/your-voice.md` -- voice baseline
+2. `.claude/skills/your-voice/SKILL.md` -- voice baseline
 3. The target page or component (read the existing copy first)
 
 Know the answers to these before writing:
@@ -112,7 +112,7 @@ Multiple CTAs at different commitment levels. Each CTA gets reassurance copy: "F
 
 Write the copy first using the framework. Then pass it through your voice filter:
 
-1. **Check against `/skills/your-voice.md`**
+1. **Check against `.claude/skills/your-voice/SKILL.md`**
 2. **Read the anti-patterns table** -- is Claude defaulting to corporate?
 3. **The real test:** Would you actually say this out loud to someone? If not, rewrite.
 
@@ -146,8 +146,8 @@ ALTERNATIVES (for A/B consideration)
 
 After drafting copy with this skill:
 
-1. **Run voice critic** (`/skills/voice-critic.md`) -- score must be 7+ before presenting
-2. **Run landing page critique** (`/skills/landing-page-critique.md`) -- structural evaluation
+1. **Run voice critic** (`.claude/skills/voice-critic/SKILL.md`) -- score must be 7+ before presenting
+2. **Run landing page critique** (`.claude/skills/landing-page-critique/SKILL.md`) -- structural evaluation
 3. If score < 7 or critique flags issues, revise and re-run
 4. Present with copy organized by component/section
 
